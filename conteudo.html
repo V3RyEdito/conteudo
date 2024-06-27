@@ -1,58 +1,61 @@
-<!-- Indica que o documento é um arquivo HTML. -->
 <!DOCTYPE html>
-
-<!-- Define a linguagem do conteúdo da página. -->
-<html lang="pt-br">
-
-<!-- Armazena informações sobre a página. -->
+<html lang="pt-BR">
 <head>
-
-	<!-- Conjunto de caracteres que contém acentuação e ç. -->
-	<meta charset="utf-8">
-
-	<!-- Configuração da janela de visualização ( responsividade ). -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Importação do arquivo CSS. -->
-	<link rel="stylesheet" type="text/css" href="assets/css/layout.css">
-
-	<!-- Título da aba do navegador -->
-	<title>Layout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos de Carros</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<!-- Conteúdo apresentado na tela. -->
 <body>
+    <!-- Include Header -->
+    <div id="header"></div>
 
-	<!-- Agrupa os elementos que compõe o cabeçalho. -->
-	<header>
-		<a href="./layout.html" id="logo">Logo</a>
+    <!-- Main Content -->
+    <main>
+        <section class="intro">
+            <h1>Bem-vindo aos Jogos de Carros</h1>
+            <p>Explore os melhores jogos de carros disponíveis na internet!</p>
+        </section>
 
-		<button id="openMenu">&#9776;</button>
-	</header>
+        <section class="games">
+            <h2>Jogos Populares</h2>
+            <div class="game-list">
+                <article class="game">
+                    <h3>Jogo 1</h3>
+                    <p>Descrição do jogo 1.</p>
+                </article>
+                <article class="game">
+                    <h3>Jogo 2</h3>
+                    <p>Descrição do jogo 2.</p>
+                </article>
+                <!-- Adicione mais jogos conforme necessário -->
+            </div>
+        </section>
+    </main>
 
-	<!-- Agrupa links de navegação no site. -->
-	<nav id="menu">
+    <!-- Include Footer -->
+    <div id="footer"></div>
 
-		<button id="closeMenu">X</button>
-
-		<a href="https://v3ryedito.github.io/conteudo/layout.html">HOME</a>
-		<a href="https://v3ryedito.github.io/conteudo/referencias.html">REFERÊNCIAS</a>
-		<a href="https://v3ryedito.github.io/conteudo/conteudo.html">CONTEÚDO</a>
-		<a href="https://v3ryedito.github.io/conteudo/integrantes.html">INTEGRANTES</a>
-	</nav>
-
-	<!-- Agrupa o conteúdo principal da página ou aplicação. -->
-	<main>Main</main>
-
-	<!-- Agrupa informações e links relacionado ao conteúdo principal. -->
-	<aside>Aside</aside>
-
-	<!-- Agrupa informações de autoria, direitos autorais, contato, 
-		   mapa do site, links e documento relacionados. -->
-	<footer>Footer</footer>
-
-	<!-- Importação do arquivo JavaScript. -->
-	<script type="text/javascript" src="assets/js/script.js"></script>
-	<h1>CONTEÚDO</h1>
-
+    <script>
+        // Include header and footer HTML
+        document.getElementById('header').innerHTML = `
+            <header>
+                <h1>Jogos de Carros</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </header>
+        `;
+        
+        document.getElementById('footer').innerHTML = `
+            <footer>
+                <p>&copy; 2024 Jogos de Carros. Todos os direitos reservados.</p>
+            </footer>
+        `;
+    </script>
 </body>
+</html>
